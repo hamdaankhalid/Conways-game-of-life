@@ -1,7 +1,9 @@
+// DI as needed
 
-// Entry point for game
+import { Gameplay } from "./gameplay";
 
-// setup board
+console.log("Setting up");
 
-// initiate game
-console.log("Hello world");
+const gameplay = new Gameplay(10, 6, ['0, 0', '1, 5', '2, 0', '1, 1', '3, 2', '4,4', '1, 3', '9, 5', '8, 7']);
+
+gameplay.play();
