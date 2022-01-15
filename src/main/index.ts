@@ -4,6 +4,19 @@ import { Gameplay } from "./gameplay";
 
 console.log("Setting up");
 
-const gameplay = new Gameplay(10, 6, ['0, 0', '1, 5', '2, 0', '1, 1', '3, 2', '4,4', '1, 3', '9, 5', '8, 7']);
+const COLUMNS = 12;
+const ROWS = 12;
+
+const ALIVES =[
+    '5, 5',
+    '6, 6',
+    '4, 7',
+    '4, 8',
+    '4, 9',
+    '4, 10',
+    '3, 7',
+]
+
+const gameplay = new Gameplay(COLUMNS, ROWS, ALIVES);
 
 gameplay.play();

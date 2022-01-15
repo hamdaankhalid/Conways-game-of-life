@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@types/node": "^17.0.8",
+    "printarray": "^0.1.4",
     "ts-node": "^10.4.0"
   }
 }

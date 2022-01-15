@@ -1,4 +1,4 @@
-import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+import * as printArray from 'printarray';
 import { Cell } from '../cell/Cell';
 import { InvalidBoardStateError } from '../errors/InvalidBoardStateError';
 import { BoardValidatorService } from '../services/BoardValidatorService';
@@ -7,14 +7,18 @@ import { CellState } from '../types';
 export class Board {
     private board: Cell[][];
     private boardValidatorService: any;
+    private cols: number;
+    private rows: number;
 
     constructor(rows: number, columns:number, boardValidatorService: BoardValidatorService, alives: string[]){
         this.boardValidatorService = boardValidatorService;
+        this.cols = columns;
+        this.rows = rows;
         this.board = this.constructBoardStructure(rows, columns, alives);
     }
 
     public printBoard() : void{
-        console.log(this.board.map((row) => row.map(col => col.state)));
+        console.table(this.board.map((row) => row.map(col => col.state)));
     }
 
     public getCurrentState() : Cell[][]{

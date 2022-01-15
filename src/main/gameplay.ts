@@ -20,7 +20,7 @@ export class Gameplay {
             this.board.printBoard();
             let currentState = this.board.getCurrentState();
             this.board.setState(this.computeNextState(currentState));
-        }, 1000);
+        }, 250);
     }
 
     private computeNextState(state: Cell[][]): Cell[][]{

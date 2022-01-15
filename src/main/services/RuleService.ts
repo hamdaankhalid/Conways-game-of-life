@@ -32,9 +32,9 @@ export class RuleService {
     }
 
     private nextStateWhenDead(neighbors: Cell[]){
-        const aliveNeigbors = this.countOccurences(neighbors, 'O');
+        const aliveNeigbors = this.countOccurences(neighbors, 'X');
 
-        if( aliveNeigbors === 3){
+        if(aliveNeigbors === 3){
             return 'X';
         }
 
