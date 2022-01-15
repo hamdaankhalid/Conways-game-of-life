@@ -18,7 +18,8 @@ export class Board {
     }
 
     public printBoard() : void{
-        console.table(this.board.map((row) => row.map(col => col.state)));
+        console.log( this.board.map((row) => row.map(col => col.state).join(' ')).join('\n')); 
+        //console.table(this.board.map((row) => row.map(col => col.state)));
     }
 
     public getCurrentState() : Cell[][]{
