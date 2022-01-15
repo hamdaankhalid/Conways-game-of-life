@@ -4,8 +4,8 @@ import { Gameplay } from "./gameplay";
 
 console.log("Setting up");
 
-const COLUMNS = 12;
-const ROWS = 12;
+const COLUMNS = 20;
+const ROWS = 20;
 
 const ALIVES =[
     '5, 5',
